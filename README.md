@@ -1,3 +1,1 @@
-A redesign of YouTube, inspired by Apple's liquid glass design.
 
-Just a random ass mini project
