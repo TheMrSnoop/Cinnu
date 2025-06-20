@@ -1,0 +1,661 @@
+@font-face {
+    font-family: Righteous;
+    src: url(Fonts/Righteous-Regular.ttf);
+}
+
+@font-face {
+    font-family: Lexend;
+    src: url(Fonts/Lexend-Regular.ttf);
+}
+
+@font-face {
+    font-family: LexendLight;
+    src: url(Fonts/Lexend-ExtraLight.ttf);
+}
+
+@font-face {
+    font-family: Boldonse;
+    src: url(Fonts/Boldonse-Regular.ttf);
+}
+
+@font-face {
+    font-family: SpaceMono;
+    src: url(Fonts/SpaceMono-Bold.ttf);
+}
+
+body, html
+{
+    padding: 0;
+}
+
+body
+{
+    color: white;
+    font-family: Lexend;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+.ToolBar
+{
+    position: fixed;
+    width: 100%;
+    height: 90px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    z-index: 3;
+    top: 0;
+    margin: 0;
+
+}
+
+.ToolBar ul
+{
+    overflow: hidden;
+    list-style-type: none;
+}
+
+.ToolBar ul li
+{
+    float: left;
+    padding: 0 10px 0 10px;
+}
+
+
+
+.YouTubeIcon
+{
+    width: 40px;
+    display: inline;
+
+    padding: 3px 25px 3px 25px;
+
+    border-radius: 50px;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+
+
+
+.ToolBar ul li a
+{
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    font-family: LexendLight;
+    height: 25px;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 50px;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.ToolBar h1
+{
+    margin-top: auto;
+    margin-bottom: auto;
+    border-radius: 50px;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    padding: 10px 300px 10px 20px;
+    font-size: 24px;
+    font-family: LexendLight;
+    color: tom;
+
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.ToolBar ul li input
+{
+    top: 0;
+    height: 25px;
+    width: 750px;
+    border-radius: 50px;
+    color: white;
+    font-family: Lexend;
+    padding: 10px;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.ToolBarImage
+{
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-left: 10px;
+
+    padding: 10px;
+
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+.Profile
+{
+    height: 40px;
+    width: 40px;
+    margin-left: 30%;
+    background-color: red;
+}
+
+
+.SideBar, .SubscriptionPanel
+{
+    position: fixed;
+    left: 50px;
+    top: 100px;
+    font-family: LexendLight;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 25px;
+    width: 170px;
+}
+
+.SubscriptionPanel
+{
+    top: 500px;
+}
+
+.SubscriptionPanel .SideBarEntry p
+{
+    font-size: 14px;
+}
+
+.SideBar hr
+{
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+
+.SideBarEntry {
+
+    margin: 10px;
+    height: 40px; /* lil more space for better alignment */
+    display: flex;
+    align-items: center; /* center icon + text vertically */
+    gap: 10px; /* space between icon and text */
+    padding: 0 10px;
+    color: white;
+}
+
+.SideBarEntry svg {
+    height: 20px; /* tweak as needed */
+    width: 20px;
+    flex-shrink: 0;
+}
+
+.SideBarEntry img
+{
+    width: 25px;
+    height: 25px;
+    flex-shrink: 0;
+    border-radius: 50%;
+}
+
+.SideBarEntry p {
+    margin: 0;
+    padding: 0;
+    border: none; /* kill the debug border */
+    display: inline-block;
+    line-height: 1;
+}
+
+
+.ContentGrid
+{
+    width: 80%;
+    margin-left: 15%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+
+
+.ContentGrid .Video
+{
+    width: 30%;
+}
+
+
+
+.Video img
+{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 25px;
+}
+
+.VideoText
+{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    padding-bottom: 15px;
+    border-radius: 25px;
+    margin-bottom: 25px;
+    margin-top: 10px;
+    
+}
+
+.Video h1
+{
+    margin-left: 10px;
+    font-size: 21px;
+    font-family: LexendLight;
+}
+
+.Video p
+{
+    font-family: LexendLight;
+    display: inline;
+    margin-left: 10px;
+}
+
+
+
+
+.ProfileBackground {
+    width: 30px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50px;
+    padding: 0; /* keep tight */
+
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+
+}
+
+
+
+.ProfileBackground:hover
+{
+    animation: ProfileHover_Background 0.25s forwards ease-in-out;
+}
+
+.ProfileBackground:hover .ProfileImage
+{
+    animation: ProfileHover_Image 0.25s forwards ease-in-out;
+}
+
+
+.ProfileImage {
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    margin-right: 0px;
+
+}
+
+
+.ProfileText
+{
+    position: fixed;
+    top: 16px;
+    left: 1070px;
+    font-family: LexendLight;
+    opacity: 0;
+    pointer-events: none;
+    user-select: none;
+
+}
+
+.ProfileTextAnimated
+{
+    animation: ProfileHover_Text 0.25s forwards ease-in-out;
+}
+
+
+
+@keyframes ProfileHover_Background {
+    0%
+    {
+        width: 30px;
+    }
+    100%
+    {
+        width: 150px;
+    }
+}
+
+@keyframes ProfileHover_Image {
+    0%
+    {
+        width: 30px;
+        height: 30px;
+        margin-right: 0px;
+    }
+    100%
+    {
+        scale: 1.25;
+        margin-right: 120px;
+    }
+}
+
+@keyframes ProfileHover_Text {
+    0%
+    {
+        opacity: 0;
+    }
+    50%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+
+
+.VideoContainer
+{
+    margin-top: 90px;
+    margin-left: 90px;
+    width: 70%;
+    height: 100%;
+}
+
+.VideoContainer video
+{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    width: 100%;
+    height: 725px;
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 50px;
+
+    opacity: 0.99;
+}
+
+.VideoTitle
+{
+    position: absolute;
+    z-index: 2;
+    top: 850px;
+}
+
+.VideoDetails
+{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    border-radius: 50px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+
+    display: flex;
+
+    padding-top: 50px;
+    
+}
+
+.VideoDetails h3, h2, p
+{
+    margin-left: 40px;
+}
+
+.VideoDetails h3
+{
+    font-size: 18px;
+    font-family: LexendLight;
+}
+
+.VideoDetails p
+{
+    opacity: 0.6;
+    font-size: 12px;
+}
+
+.CreatorInfo
+{
+    width: 12.5%;
+}
+
+.SubscribeButton
+{
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 100px;
+    height: 50%;
+    border-radius: 50px;
+    margin-left: 25px;
+    margin-top: auto;
+    margin-bottom: auto;
+
+}
+
+.SubscribeButton p
+{
+    width: 100%;
+    text-align: center;
+    margin-left: 0;
+}
+
+.LikeContainer {
+    width: 150px;
+    height: 50px;
+
+    margin: auto 0 auto 60%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    padding: 0 8px;
+    box-sizing: border-box;
+
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50px;
+    padding: 10px 20px 10px 20px;
+}
+
+.LikeContainer .likeSection,
+.LikeContainer .dislikeSection {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.LikeContainer svg {
+    width: 24px;
+    height: 24px;
+}
+
+.LikeContainer p {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1;
+}
+
+.LikeDivider
+{
+    height: 80%;
+    width: 1px;
+    background-color: white;
+}
+
+.VideoDescription
+{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    margin-top: 25px;
+    border-radius: 50px;
+}
+
+.VideoDescription a
+{
+    color: tomato
+}
+
+.RecommendedVideos
+{
+    display: flexbox;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    top: 90px;
+    right: 20px;
+    
+}
+
+
+.RecommendedVideos .Video
+{
+    width: 100%;
+}
+
+
+
+
+
+.ProfileVideoGrid
+{
+    width: 80%;
+    margin-left: 25%;
+    margin-top: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.ProfileVideoGrid .Video
+{
+    width: 25%;
+}
+
+.ProfileVideoGrid .Video img
+{
+    height: 200px;
+}
+
+.ProfileVideoGrid .Video .VideoText h1
+{
+    font-size: 17px;
+}
+
+
+.CreatorProfileContainer
+{
+    margin-left: 25%;
+    margin-top: 100px;
+    width: 60%;
+}
+
+.CreatorBanner
+{
+    width: 100%;
+    
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+
+    border-radius: 25px;
+    margin-bottom: 50px;
+}
+
+.CreatorBanner img
+{
+    width: 98%;
+    height: 300px;
+    object-fit: cover;
+    padding: 10px;
+    border-radius: 25px;
+}
+
+.CreatorInfoContainer
+{
+
+    width: 100%;
+    display: flex;
+}
+
+.CreatorProfilePicture
+{
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-right: 50px;
+}
+
+.CreatorProfilePicture img
+{
+    width: 180px;
+    height: 180px;
+    padding: 10px;
+    border-radius: 50%;
+}
+
+
+.CreatorProfileInfo
+{
+    width: 100%;
+    height: 200px;
+
+    background: rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 2px rgba(255, 255, 255, 0.2) solid;
+    border-radius: 25px;
+}
+
+.CreatorProfileInfo h1, p
+{
+    margin-left: 25px;
+}
